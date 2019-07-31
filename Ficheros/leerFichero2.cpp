@@ -5,7 +5,7 @@
 int
 main() {
 
-  FILE *fd = fopen("leerFicheroX.cpp", "r");
+  FILE *fd = fopen("leerFichero.cpp", "r");
 
   if (fd == NULL) {
     fprintf(stderr, "Problemas: %s \n", strerror(errno));
@@ -13,7 +13,7 @@ main() {
   }
   
   int c;
-  while ((c = getc(stdin)) != EOF) {
+  while ((c = getc(fd)) != EOF) {
     c += 7;
     fputc(c, stdout);
   }
